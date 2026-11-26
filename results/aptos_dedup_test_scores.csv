@@ -1,0 +1,7 @@
+run,test set,n,accuracy,QWK
+Swin-T_APTOS,all test images,366,0.8415,0.8858
+Swin-T_APTOS,without duplicates of TRAIN images,342,0.848,0.8833
+Swin-T_APTOS,without duplicates of TRAIN or VAL images,340,0.85,0.8815
+ViT-B16_APTOS,all test images,366,0.8415,0.907
+ViT-B16_APTOS,without duplicates of TRAIN images,342,0.8509,0.9076
+ViT-B16_APTOS,without duplicates of TRAIN or VAL images,340,0.8559,0.911

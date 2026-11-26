@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Trustworthy Explainable AI for Diabetic Retinopathy Grading: A Joint Faithfulness, Sanity, and Plausibility Benchmark Across Vision Transformer Architectures (code and executed notebooks)"
+type: software
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Ali
+    given-names: Mehar
+    affiliation: "Riphah Institute of Systems Engineering (RISE), Riphah International University, Islamabad, Pakistan"
+    orcid: "https://orcid.org/0009-0009-0564-7261"
+  - family-names: Ishaq
+    given-names: Afia
+    affiliation: "Riphah Institute of Systems Engineering (RISE), Riphah International University, Islamabad, Pakistan"
+  - family-names: Ullah
+    given-names: Saad
+    affiliation: "Riphah Institute of Systems Engineering (RISE), Riphah International University, Islamabad, Pakistan"
+keywords:
+  - diabetic retinopathy
+  - explainable artificial intelligence
+  - vision transformer
+  - faithfulness
+  - sanity checks
+  - plausibility
+# repository-code: "https://github.com/<user>/<repo>"   # add after creating the repository
+# doi: "10.5281/zenodo.<id>"                             # add after the first Zenodo release

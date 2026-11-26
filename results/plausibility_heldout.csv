@@ -1,0 +1,11 @@
+run,subset,explainer,union_auprc_ratio_mean,union_auprc_ratio_std,EX,MA,n_images
+Swin-T_IDRiD,held-out: not a training-split photograph (vessel-pattern r < 0.95 or match in val/test),IntegratedGradients,3.069,1.567,4.95,1.78,25
+Swin-T_IDRiD,held-out: not a training-split photograph (vessel-pattern r < 0.95 or match in val/test),TokenNorm (Swin surrogate),1.508,0.838,2.00,1.37,25
+Swin-T_IDRiD,held-out: not a training-split photograph (vessel-pattern r < 0.95 or match in val/test),GradCAM,1.467,0.616,2.03,1.67,25
+Swin-T_IDRiD,held-out: not a training-split photograph (vessel-pattern r < 0.95 or match in val/test),TransformerAttribution,1.191,0.532,1.49,1.29,25
+Swin-T_IDRiD,held-out: not a training-split photograph (vessel-pattern r < 0.95 or match in val/test),InputGrad (baseline),1.117,0.410,1.51,2.53,25
+ViT-B16_IDRiD,held-out: not a training-split photograph (vessel-pattern r < 0.95 or match in val/test),IntegratedGradients,8.321,5.353,21.38,4.20,25
+ViT-B16_IDRiD,held-out: not a training-split photograph (vessel-pattern r < 0.95 or match in val/test),InputGrad (baseline),3.119,2.195,5.26,3.29,25
+ViT-B16_IDRiD,held-out: not a training-split photograph (vessel-pattern r < 0.95 or match in val/test),TransformerAttribution,2.398,2.083,2.80,1.44,25
+ViT-B16_IDRiD,held-out: not a training-split photograph (vessel-pattern r < 0.95 or match in val/test),AttentionRollout,1.602,0.827,1.48,0.89,25
+ViT-B16_IDRiD,held-out: not a training-split photograph (vessel-pattern r < 0.95 or match in val/test),GradCAM,1.479,1.115,1.69,1.46,25

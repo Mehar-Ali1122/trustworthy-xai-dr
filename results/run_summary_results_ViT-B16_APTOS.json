@@ -1,0 +1,51 @@
+{
+  "run_tag": "ViT-B16_APTOS",
+  "backbone": "vit_base_patch16_224",
+  "dataset": "APTOS",
+  "img_size": 224,
+  "split_policy": "stratified 70/15/15 of the 3,662 labelled APTOS images; no official test partition exists (Kaggle withheld test labels)",
+  "n_train_unique": 2930,
+  "n_train_with_augmentation": 4042,
+  "n_val": 366,
+  "n_test": 366,
+  "preprocessing": "OFFLINE: stratified 70/15/15 split of the 3,662 labelled APTOS-2019 images (no official test partition exists \u2014 Kaggle withheld the competition test labels); retinal ROI crop -> resize 224 -> CLAHE on ALL splits -> geometric augmentation TRAIN ONLY (per-class floor of 600). Leakage verified: zero image-ID overlap between train/val/test. Normalisation applied on-the-fly.",
+  "clahe_all_splits": true,
+  "best_val_qwk": 0.9083,
+  "best_epoch": 14,
+  "test_acc": 0.8415,
+  "test_qwk": 0.907,
+  "explainers": [
+    "InputGrad (baseline)",
+    "GradCAM",
+    "AttentionRollout",
+    "IntegratedGradients",
+    "TransformerAttribution"
+  ],
+  "xai_n_per_class": 12,
+  "seeds": [
+    42,
+    1,
+    7
+  ],
+  "multiseed_variance_real": true,
+  "variance_note": "seeds draw different subsets \u2014 std is meaningful",
+  "sanity_threshold": 0.3,
+  "sanity_criterion": "mean |rho| across fractions (more stable than a single full-randomization cutoff)",
+  "plausibility_computed": false,
+  "plausibility_note": "N/A by design \u2014 APTOS-2019 provides image-level severity labels only, with no pixel-level lesion masks. The plausibility axis is reported for IDRiD only; state this asymmetry in the manuscript.",
+  "plausibility_n": 0,
+  "axes_reported": [
+    "faithfulness",
+    "sanity"
+  ],
+  "most_trustworthy": "TransformerAttribution",
+  "honesty_flags": [
+    "Report 2,930 UNIQUE training retinas, not the 4,042 augmented total.",
+    "PLAUSIBILITY IS N/A: APTOS-2019 has no pixel-level lesion masks. This run is TWO-AXIS. Mark APTOS plausibility cells 'N/A' in cross-dataset tables \u2014 never blank, which reads as a missing experiment.",
+    "Split policy differs from IDRiD by design: APTOS has no official test partition, so 70/15/15 was created here; IDRiD's official 103-image test set was preserved for literature comparability. State both.",
+    "Balancing policy also differs: APTOS used a per-class floor of 600; the rebuilt IDRiD used 60%-of-majority with a 4x cap. The datasets differ ~7x in size, which justifies this \u2014 but state it.",
+    "Attention-Rollout is ViT-only; Swin uses a labelled TokenNorm surrogate. Never conflate them in tables.",
+    "CLAHE applied to all splits as a fixed constant across explainers, so preprocessing is not a confound between methods.",
+    "Leakage verified: zero image-ID overlap between train/val/test."
+  ]
+}

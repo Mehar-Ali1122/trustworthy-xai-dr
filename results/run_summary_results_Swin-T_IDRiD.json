@@ -1,0 +1,45 @@
+{
+  "run_tag": "Swin-T_IDRiD",
+  "backbone": "swin_tiny_patch4_window7_224",
+  "dataset": "IDRiD",
+  "img_size": 224,
+  "split_policy": "official IDRiD 103-image test preserved; stratified 90/10 train/val carve of official train (seed 42)",
+  "n_train_unique": 371,
+  "n_train_with_augmentation": 460,
+  "n_val": 42,
+  "n_test": 103,
+  "preprocessing": "OFFLINE rebuild: official IDRiD grading split (103-image test preserved); stratified 90/10 train/val carve (seed 42); three-tier ROI crop -> resize 224 -> CLAHE (LAB-L, clip 2.0, 8x8) on ALL splits -> geometric augmentation TRAIN ONLY (floor 60% of majority, cap 4x, rotation <=12deg, zoom 0.92-1.08, BORDER_REFLECT_101). Normalisation applied on-the-fly.",
+  "clahe_all_splits": true,
+  "best_val_qwk": 0.7781,
+  "best_epoch": 11,
+  "test_acc": 0.5049,
+  "test_qwk": 0.6002,
+  "explainers": [
+    "InputGrad (baseline)",
+    "GradCAM",
+    "TokenNorm (Swin surrogate)",
+    "IntegratedGradients",
+    "TransformerAttribution"
+  ],
+  "xai_n_per_class": 12,
+  "seeds": [
+    42,
+    1,
+    7
+  ],
+  "multiseed_variance_real": true,
+  "variance_note": "seeds draw different subsets \u2014 std is meaningful",
+  "sanity_threshold": 0.3,
+  "sanity_criterion": "mean |rho| across fractions (more stable than a single full-randomization cutoff)",
+  "plausibility_computed": true,
+  "plausibility_note": "IDRiD Segmentation subset (n=81), union of MA/HE/EX/SE, optic disc excluded. VERIFIED disjoint from the grading subset (different photographs: zero MD5 matches, perceptual corr 0.73-0.97). Inference only \u2014 never trained on.",
+  "plausibility_n": 81,
+  "most_trustworthy": "GradCAM",
+  "honesty_flags": [
+    "Report 371 UNIQUE training retinas, not the augmented total.",
+    "Class 1 support is 5 in test / 2 in val \u2014 per-class metrics are high-variance; early stopping keyed on overall val QWK.",
+    "Attention-Rollout is ViT-only; Swin uses a labelled TokenNorm surrogate. Never conflate them in tables.",
+    "Plausibility uses the IDRiD segmentation subset (n=81), verified DISJOINT from the grading images. APTOS has no masks \u2014 plausibility is IDRiD-only, and that asymmetry must be stated.",
+    "CLAHE applied to all splits as a fixed constant across explainers, so preprocessing is not a confound between methods."
+  ]
+}

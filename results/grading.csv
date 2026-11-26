@@ -1,0 +1,5 @@
+run,notebook,best_val_qwk,best_epoch,test_acc,test_qwk,n_test,cell_train,cell_test
+Swin-T_IDRiD,01_SwinT_IDRiD.ipynb,0.7781,11,0.5049,0.6002,103,18,21
+ViT-B16_IDRiD,02_ViT-B16_IDRiD.ipynb,0.8563,34,0.5631,0.6454,103,18,21
+Swin-T_APTOS,03_SwinT_APTOS.ipynb,0.9204,26,0.8415,0.8858,366,18,21
+ViT-B16_APTOS,04_ViT-B16_APTOS.ipynb,0.9083,14,0.8415,0.9070,366,18,21

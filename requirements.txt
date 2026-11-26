@@ -1,0 +1,22 @@
+# Python 3.10 (Google Colab runtime recorded in the notebook metadata).
+#
+# The executed notebooks installed the then-current releases on Google Colab in
+# July 2026 (`pip install -q timm captum scikit-image scikit-learn seaborn tqdm`)
+# and did not print package versions, so exact versions are NOT recorded.
+# The code comments target timm 1.0.x (token layout of Swin `norm2` and the ViT CLS token).
+# After a fresh run, record your environment with:  pip freeze > requirements-lock.txt
+torch
+torchvision
+timm>=1.0,<1.1
+captum
+numpy
+scipy
+pandas
+scikit-learn
+scikit-image
+opencv-python      # preprocessing notebook, src/plausibility_eval.py, scripts/verify_seg_grading_disjoint.py
+matplotlib
+seaborn
+pillow
+tqdm
+jupyter

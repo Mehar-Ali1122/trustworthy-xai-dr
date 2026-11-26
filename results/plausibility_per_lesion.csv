@@ -1,0 +1,11 @@
+run,explainer,MA,HE,EX,SE,mean,cell
+Swin-T_IDRiD,IntegratedGradients,2.059,2.953,6.683,9.313,5.252,42
+Swin-T_IDRiD,GradCAM,1.689,2.692,1.891,3.159,2.358,42
+Swin-T_IDRiD,TransformerAttribution,1.351,1.466,1.312,2.711,1.710,42
+Swin-T_IDRiD,TokenNorm (Swin surrogate),1.487,1.540,2.377,1.422,1.706,42
+Swin-T_IDRiD,InputGrad (baseline),1.857,1.697,1.530,1.372,1.614,42
+ViT-B16_IDRiD,IntegratedGradients,3.524,9.378,20.341,22.481,13.931,42
+ViT-B16_IDRiD,AttentionRollout,1.072,1.215,1.965,16.804,5.264,42
+ViT-B16_IDRiD,TransformerAttribution,1.593,1.864,8.042,5.283,4.196,42
+ViT-B16_IDRiD,InputGrad (baseline),3.901,5.470,4.795,2.273,4.110,42
+ViT-B16_IDRiD,GradCAM,1.250,1.513,1.295,1.988,1.511,42
