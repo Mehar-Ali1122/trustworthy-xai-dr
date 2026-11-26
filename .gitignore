@@ -1,0 +1,30 @@
+# Datasets are never committed (see data/README.md)
+data/*
+!data/README.md
+*.zip
+*.rar
+
+# Model checkpoints and run outputs
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+outputs/
+
+# Credentials
+kaggle.json
+.env
+*.key
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
