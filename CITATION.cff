@@ -22,5 +22,5 @@ keywords:
   - faithfulness
   - sanity checks
   - plausibility
-# repository-code: "https://github.com/<user>/<repo>"   # add after creating the repository
-# doi: "10.5281/zenodo.<id>"                             # add after the first Zenodo release
+repository-code: "https://github.com/Mehar-Ali1122/trustworthy-xai-dr"
+doi: "10.5281/zenodo.24555312"
