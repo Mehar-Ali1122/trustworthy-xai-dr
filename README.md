@@ -1,10 +1,11 @@
 # Trustworthy Explainable AI for Diabetic Retinopathy Grading
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24555312.svg)](https://doi.org/10.5281/zenodo.24555312)
 
 Code and executed notebooks for the manuscript
 
 > M. Ali, A. Ishaq, and S. Ullah, “Trustworthy explainable AI for diabetic retinopathy grading:
 > A joint faithfulness, sanity, and plausibility benchmark across vision transformer
-> architectures,” manuscript, 2026.
+> > architectures,” manuscript, 2026. Code archived at https://doi.org/10.5281/zenodo.24555312.
 
 Table and figure numbers below follow the manuscript (Tables 1–6, Figs. 1–6).
 
